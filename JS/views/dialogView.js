@@ -84,8 +84,6 @@ function dialogView() {
 }
 
 function newChat(index) {
-	console.log(model.users[index].id)
-	console.log("virker jeg?", model.users[model.app.userIndex].isAdmin)
 	let object = {
 		id: chatNewId(),
 		date: findDate("date"),
@@ -103,8 +101,6 @@ function getFirstName(){
 	let found = model.users.find((x) => x.userName === model.app.currentUser);
 	let chatDisplayName;
 	chatDisplayName = found.firstName;
-	console.log(chatDisplayName, 'chatdisplay')
-	console.log(found, 'found')
 	return chatDisplayName;
 	
 }

@@ -49,7 +49,6 @@ function makeActive(index) {
 		}
 		// add the new active challeng
 		model.challenges[index].isActive = true;
-		console.log(model.challenges[index].isActive)
   } 
 viewSelector();
 }
