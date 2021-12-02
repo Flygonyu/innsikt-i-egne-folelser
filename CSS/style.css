@@ -1,0 +1,526 @@
+:root {
+	/* Prøve å få ned farger til 4-6?
+	backgrunn
+	header/footer
+	text
+	knapper
+		highlights
+	Inputs
+	border
+	Skygger?
+
+	*/
+	--baseColor: hsl(103, 44%, 75%);
+	--mainColor: hsl(103, 40%, 88%);
+	--headerColor: hsl(0, 0%, 100%);
+	--borderColor: hsl(114, 12%, 49%);
+	--buttonColor: hsl(97, 58%, 81%);
+	--btnHightlight: rgb(199, 212, 187);
+	--btnHightlightBorder: hsl(81, 44%, 30%);
+	--buttonColorNav: hsla(108, 19%, 41%, 0.9);
+	--sliderBackground: hsl(120, 100%, 11%);
+	--sliderButton: hsl(120, 100%, 25%);
+	--inputColor: white;
+	--txtColor: hsl(0, 0%, 0%);
+	--inputText: rgb(0, 0, 0);
+	--txtShadow: rgb(53, 53, 53);
+	--borderLines: rgba(47, 65, 27, 0.692);
+	--checkColor: hue-rotate(220deg);
+	--borderRadius: 2px;
+	--headerSize: 20vh;
+	--mainContentSize: 61vh;
+	--footerSize: 15vh;
+	 
+}
+/* min bredde?  */
+body {
+	margin: auto;
+	background-color: var(--baseColor);
+	font-family: Manrope;
+	overflow: hidden;
+}
+
+*{
+	color: var(--txtColor);
+}
+
+#app{
+	height: 100vh;
+	width: 100vw;
+	/* max-width: 414px;
+	max-height: 736px; */
+}
+
+.header{
+	position: absolute;
+	background-color: var(--baseColor);
+	height: var(--headerSize);
+	width: 100vw;
+	top: 4vh;
+
+	/* border: var(--divBorder) */
+}
+
+.mainContent{
+	border-top: 1px var(--borderLines) outset;
+	box-sizing: border-box;
+	height: var(--mainContentSize);
+	width: 100vw;
+	background-color: var(--mainColor);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	position: absolute;
+	top: 24vh;	
+}
+.scroll {
+	width: 100vw;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+}
+
+.scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.footer {
+	border-top: 1px var(--borderLines) outset;
+	background-image: url("../rainbowFooter.png");
+		background-position: left bottom;
+  		background-attachment: fixed;
+		background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0;
+	background-color: var(--baseColor);
+	height: var(--footerSize);
+	width: 100vw;
+}
+
+.logOut{
+	width: auto;
+	height: auto;
+	font-size: 0.6rem;
+}
+
+button {
+	width: 30vw;
+	height: 8vh;
+	margin: 2vh;
+	font-size: 1rem;
+	font-family: K2D; /* finn en bedre font for knapper */
+	border-radius: var(--borderRadius);
+	border-color: var(--borderColor);
+	border-style: outset;
+}
+
+.flipH{			/*flips arrow on back navBtn*/
+	display: inline-block;
+	transform: scale(-1, 1);
+	color: var(--headerColor);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+input[type='text'] {
+background-color: var(--inputColor);
+border-color: var(--borderColor);
+color: var(--inputText);
+height: 7%;
+}
+
+.regButton {
+	background-color: var(--buttonColor);
+	/* color: var(--txtColor); */
+}
+
+.navButtons {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100vw;
+	position: absolute;
+	bottom: 2.5vh;
+}
+
+
+.next,
+.back, 
+.cancel {
+	height: 6vh;
+	background-color: var(--buttonColorNav);
+	border: none;
+	font-size: 0.9rem;
+	color: var(--headerColor);
+	width: 35vw;
+}
+button#cancel {
+	max-width: 20vw;
+}
+
+.hiddenButTakingSpace{
+	margin-top: 0;
+	opacity: 0;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+
+h2 {
+	/* font-family: Satisfy; */
+	font-size: 1.5rem;
+	/* margin: 1vw; */
+	text-align: center;
+	color: var(--headerColor);
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+#loginInfo{
+	font-size: 0.7rem;
+	background-color: var(--baseColor);
+	height: 5vh;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	width: 100vw;
+}
+
+#logInText {
+	padding: 1vh;
+}
+
+/* highlight buttons */
+.chosen {
+	border: var(--btnHightlightBorder) inset 2px;
+	background-color: var(--btnHightlight);
+}
+
+
+/*  */
+
+/* feelsview */
+.beskrivelse{
+	margin:auto;
+	text-align: center;
+	font-size: 0.9rem;
+	width: 90vw;
+}
+
+
+/*intensityPage*/
+
+	#sliders {
+		box-sizing: border-box;
+		width: 100vw;
+		height: 100%;
+		text-align: center;
+		font-size: 1.3rem;
+		background-color: var(--mainColor);
+		font-family: Cantarell;
+	}
+
+	.feelingSlider {
+		padding: 2.6vh;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		input[type='range'] {
+		overflow: hidden;
+		width: 140px;
+		margin: 20px;
+		border-radius: 100px;
+		-webkit-appearance: none;
+		background-color: white;
+		}
+
+		input[type='range']::-webkit-slider-thumb {
+		width: 15px;
+		-webkit-appearance: none;
+		height: 15px;
+		border-radius: 100px;
+		background: var(--sliderBackground);
+		box-shadow: -80px 0 0 75px var(--sliderButton);
+		}
+
+		input[type='range']::-webkit-slider-runnable-track {
+		height: 15px;
+		-webkit-appearance: none;
+		color: var(--sliderButton);
+		}
+		
+		
+	}
+
+/* Comments/Chat view */
+
+	#chatContainer {
+		box-sizing: border-box;
+		height: 55vh;
+		width: 100vw;
+		background-color: var(--mainColor);
+	}
+	#chatInput {
+		position: absolute;
+		bottom: 0;
+		width: 80%;
+		height: 7%;
+		font-size: large;
+	}
+	.chatInput {
+		position: absolute;
+		bottom: 0;
+		width: 80%;
+		font-size: large;
+	}
+
+	#comments {
+		box-sizing: border-box;
+		height: var(--mainContentSize);
+		width: 100vw;
+		text-align: left;
+	}
+
+	#scrollBottom {
+		position: relative;
+		scroll-behavior: 0;
+		overflow: revert;
+	}
+	#bottomScroll {
+		height: 0.5vh;
+		width: 90vw;
+	}
+
+	.newReg {
+		margin-top: -10vh;
+		text-align: center;
+	}
+	.chatDate {
+		margin-top: 1vh;
+		text-align: center;
+	}
+
+	#chatInfo{
+		margin: 0vw 5vw 5vw 5vw;
+	}
+
+	#commentInfo{
+		margin: 0vw 5vw 5vw 5vw;
+	}
+	
+	hr{
+		width: 90vw;
+		height:1px;
+		background-color: var(--borderColor);
+		border:none;
+	}
+
+	#add {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		width: 20%;
+		height: 7%;
+		right: 0;
+		bottom: 0;
+		font-size: medium;
+		background-color: var(--btnHightlight);
+	}
+	.add {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		width: 20%;
+		height: 7%;
+		right: 0;
+		bottom: 0;
+		font-size: medium;
+		background-color: var(--btnHightlight);
+	}
+
+	
+	.c1 {   /*class for input checkboxes*/
+		box-shadow: none;
+		filter: var(--checkColor);
+		height: 15px;
+		width: 15px;
+		margin-top: 4px;
+	}
+	
+	.oldChal {
+		height: 45vh;
+		margin-left: 2vw;
+		width: 98vw;
+	}
+	#challengeH3 {
+		top: 0;
+		left: 1vw;
+		position: absolute;
+		margin-left: 1vw;
+	}
+	#oldChallenges{
+		left: 1vw;
+		position: absolute;
+		text-align: left;
+		margin-left: 1vw;
+	}
+	.chalContainer {
+		margin-bottom: 2vh;
+		width: 95vw;
+		max-width: 95vw;
+		display: flex;
+	}
+		#deleteChal  {
+		
+		}
+		#activeChal {
+			padding-left: 2vw;
+		}
+		#chalText {
+			padding-left: 2vw;
+			text-align: left;
+		}
+
+
+	#activeChallenge{
+	text-align: center;
+	}
+	#activeChallenge p {
+		font-size: 1.5rem;
+	}
+
+
+/* min side CSS*/
+
+	#startContainer {
+		box-sizing: border-box;
+		height: var(--mainContentSize);
+		width: 100vw;
+		background-color: var(--mainColor);
+		margin: auto;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.startBtn {
+		width: 60vw;
+		margin: 5px;
+		background-color: var(--buttonColor);
+		/* color: var(--txtColor); */
+	}
+
+	.startChallengeContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
+		
+	}
+	.startHeader {
+		margin: 2vh 0 1vh 0 ;
+		padding: 0;
+	}
+
+	.changeChallenge {
+		height: auto;
+		width: auto;
+		font-size: 0.6em;
+		background-color: var(--buttonColor);
+		border-color: var(--borderColor);
+	}
+
+	.currentChallenge {
+		font-weight: bold;
+		font-size: 0.9em;
+		text-align: center;
+		/* max-width: 100vw; */
+	}
+
+
+/* login view CSS*/
+
+	.loginContainer{
+		margin-top: 5vh;
+		background-image: url("../rainbowLogin.png");
+		background-position: left bottom;
+  		background-attachment: fixed;
+		background-repeat: no-repeat;
+		text-align: center;
+		overflow: hidden;
+		height:100vh;
+	}
+
+	.loginBtn{
+		height:auto;
+		width:auto;
+		font-size: 1rem;
+		background-color: var(--buttonColor);
+		padding: 1vw;
+	}
+	#hensiktH3 {
+		color: hsl(108, 19%, 36%);
+		text-shadow: none
+	}
+
+	.hensikt {
+		font-weight: 600;
+		width:80vw;
+		margin:6vh auto 4vh auto;
+		color: var(--headerColor);
+		text-shadow: 1px 1px var(--txtShadow);
+	}
+
+	input[type='password'],
+	#registerUsername,
+	#registerFirstName,
+	#registerLastName,
+	#loginInput{
+		margin-bottom:10px;
+		background-color: var(--inputColor);
+		border-color: var(--borderColor);
+		height: 35px;
+}
+
+/* instillinger View */
+
+#instBtn {
+	width: auto;
+	height: auto;
+	background-color: var(--buttonColor);
+}
+ 
+.locaInput{
+	height: 30px;
+	margin:1px;
+	background-color: var(--inputColor);
+	color: var(--inputText);
+}
+
+#challengeInput{
+	color: var(--inputText);
+	background-color: var(--inputColor);
+}
+::placeholder {
+	color: var(--inputText);
+	opacity: 0.7;
+}
