@@ -23,7 +23,7 @@
 	--inputColor: white;
 	--txtColor: hsl(0, 0%, 0%);
 	--inputText: rgb(0, 0, 0);
-	--txtShadow: rgb(53, 53, 53);
+	--txtShadow: rgb(14, 17, 13);
 	--borderLines: rgba(47, 65, 27, 0.692);
 	--checkColor: hue-rotate(220deg);
 	--borderRadius: 2px;
@@ -489,6 +489,10 @@ li {
 		color: var(--headerColor);
 		text-shadow: 1px 1px var(--txtShadow);
 	}
+
+	/* div.hensikt{
+		background-color: hsla(103, 44%, 75%, 0.3);
+	} */
 
 	input[type='password'],
 	#registerUsername,

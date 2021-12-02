@@ -32,7 +32,7 @@ function updateColor(value) {
 		inputColor = 'white';
 		txtColor = 'hsl(0, 0%, 0%)';
 		inputText = 'rgb(0, 0, 0)';
-		txtShadow = 'rgb(53, 53, 53)';
+		txtShadow = 'rgb(14, 17, 13)';
 		checkColor = 'hue-rotate(220deg)';
 		borderLines = 'rgba(47, 65, 27, 0.692)';
 	}

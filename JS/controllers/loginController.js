@@ -30,13 +30,13 @@ function createUser(){
 		firstName: user.firstName,
 		lastName: user.lastName,
 		pwd: user.pwd,
-		isAdmin: false,
+		isAdmin: user.isAdmin,
 		isPersonal: false,
 		register: [], 
 		challenges: [],
 		instillinger: {
-			colorChooser: "",
-			themeChooser: "",
+			colorChooser: "standard",
+			themeChooser: "square",
 			locations:[
 			{name: "Hjemme"},
 			{name: "Jobb"},
@@ -102,6 +102,7 @@ function registerCleanup() {
 	user.confirmPwd = undefined;
 	user.firstName = undefined;
 	user.lastName = undefined;
+	user.isAdmin = false;
 }
 
 function logOut() {
@@ -110,4 +111,13 @@ function logOut() {
 	updateBorder("square")
 	modelCleanup();
 	changeView("logIn");
+}
+
+function makeAdmin() {
+	if (model.newUser.isAdmin === true) {
+		model.newUser.isAdmin = false;	
+	} 
+	else {
+	model.newUser.isAdmin = true;
+	}
 }

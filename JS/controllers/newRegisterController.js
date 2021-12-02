@@ -11,10 +11,17 @@ function clone(newExperience) {
 	return JSON.parse(JSON.stringify(newExperience));
 }
 function findNextId() {
-	let lastIndex = model.experiences.length;
-	let newIndex = model.experiences[lastIndex - 1].id + 1;
-	model.newExperience.id = newIndex;
-	model.users[model.app.userIndex].register.push(newIndex);
+	let lastIndex;
+	let newIndex = 1;
+	if(model.experiences.length <= 0){
+		model.newExperience.id = newIndex;
+		model.users[model.app.userIndex].register.push(newIndex);
+	} else {
+		lastIndex = model.experiences.length;
+		newIndex = model.experiences[lastIndex - 1].id + 1;
+		model.newExperience.id = newIndex;
+		model.users[model.app.userIndex].register.push(newIndex);
+	}
 }
 
 function modelCleanup() {

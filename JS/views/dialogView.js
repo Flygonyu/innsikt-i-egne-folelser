@@ -84,23 +84,41 @@ function dialogView() {
 }
 
 function newChat(index) {
+	console.log(model.users[index].id)
+	console.log("virker jeg?", model.users[model.app.userIndex].isAdmin)
 	let object = {
 		id: chatNewId(),
 		date: findDate("date"),
 		time: findDate("timeStamp"),
 		text: dialogInput.value,
-		chatId: model.app.currentUser == "veileder" ? model.users[index].id : userId(),
-		user: model.users[index].firstName,
+		chatId: model.users[model.app.userIndex].isAdmin !== true ? model.users[index].id : userId(),
+		user: getFirstName(),
 	};
 	if (dialogInput.value != '') {
 	model.chat.push(object);
 	viewSelector();
 }}
 
+function getFirstName(){
+	let found = model.users.find((x) => x.userName === model.app.currentUser);
+	let chatDisplayName;
+	chatDisplayName = found.firstName;
+	console.log(chatDisplayName, 'chatdisplay')
+	console.log(found, 'found')
+	return chatDisplayName;
+	
+}
+
 function chatNewId() {
-	let lastIndex = model.chat.length; 
-	let newIndex = model.chat[lastIndex - 1].id + 1;
+	let lastIndex;
+	let newIndex = 1;
+	if(model.chat.length <= 0){
+		return newIndex;
+	} else {
+	lastIndex = model.chat.length; 
+	newIndex = model.chat[lastIndex - 1].id + 1;
 	return newIndex;
+}
 }
 
 function userId() {

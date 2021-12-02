@@ -1,6 +1,6 @@
-# Emotional Rollercoaster
-## now with bugs
+# Innsikt i egne følelser
+## av Stigh, Vanja og Kristoffer
 
-### Register feelings on the go throughout the day!
+### Registrer følelser/hendelser igjennom dagen, og få innsikt i hva og hvorfor det oppstår!
 
-#### Features TBA
+#### Legg til ny bruker, registrer hendelser, chat med eventuelle veileder, legg til kommentarer i dine hendelser. Og ønsker du kun å bruke appen for personlige formål, huk av for dette i instillinger og ingen andre vil kunne se dine registreringer!

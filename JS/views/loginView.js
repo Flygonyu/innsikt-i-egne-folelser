@@ -96,6 +96,15 @@ function loginView() {
 
         <br> 
 
+		
+		<input
+		name="adminBox"
+		type="checkbox"
+		onchange="makeAdmin()">
+		<label for="adminBox">Huk av for å være admin/veileder</label>
+		
+		<br>
+
         <button class="loginBtn" onclick="chooseLogin(1); registerCleanup()" type="submit">Avbryt</button>   
         <button class="loginBtn" onclick="createUser()" type="submit">Registrer</button>   
         <br>    
