@@ -39,7 +39,7 @@ html += `
                         html+= `<div id=""><ins>Andre kommentarer:</ins></div>`          
                         for (let i = 0; i < exp.comments.length; i++) {
                             if (i >= 0) { 
-                                html+= `<div id="">${exp.comments[i].text}</div>`
+                                html+= `<div id="">${exp.comments[i].text == undefined ? '' : exp.comments[i].text}</div>`
                             };
                             }
                         }
