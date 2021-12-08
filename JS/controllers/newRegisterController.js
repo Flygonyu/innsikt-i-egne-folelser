@@ -25,9 +25,10 @@ function findNextId() {
 }
 
 function modelCleanup() {
+	let index = model.app.userIndex;
 	let exp = model.newExperience;
 	let feelings = model.feelings;
-	let loca = model.locations;
+	let loca = model.users[index].instillinger.locations;
 	let trigg = model.triggers;
 	let feelsIndex; 
 	if(model.newExperience.feelings.length > 0) {
